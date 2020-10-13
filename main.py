@@ -82,7 +82,7 @@ def format_data(table):
                 n.append({**p, **{"info": t["info"]}})
         n.sort(key=lambda x: x["startUTC"])
         return "\n".join(
-            [getLine(p, p["info"]) for p in n])
+            out + [getLine(p, p["info"]) for p in n])
         
     else:
         for p in table["passes"]:
