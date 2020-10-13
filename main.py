@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 NOAA_18 = 28654
 NOAA_15 = 25338
