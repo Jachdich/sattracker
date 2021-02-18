@@ -43,7 +43,7 @@ def get_datetime(number):
         return "{}:{}, {}/{}".format(hour, minute, day, month)
 
 def getURL(SAT_ID, LAT, LONG, ALT, DAYS, MIN_PASS, API_KEY):
-    return "https://www.n2yo.com/rest/v1/satellite/radiopasses/{sat_id}/{lat}/{long}/{alt}/{days}/{min_pass}/&apiKey={api_key}".format(
+    return "https://api.n2yo.com/rest/v1/satellite/radiopasses/{sat_id}/{lat}/{long}/{alt}/{days}/{min_pass}/&apiKey={api_key}".format(
         sat_id = SAT_ID, lat = LAT, long = LONG, alt = ALT, days = DAYS, min_pass = MIN_PASS, api_key = API_KEY)
     
 def get_data(sat, days, min_pass):
@@ -78,6 +78,7 @@ def format_data(table):
     if type(table) == list:
         n = []
         for t in table:
+            if t.get("passes", None) == None: continue
             for p in t["passes"]:
                 n.append({**p, **{"info": t["info"]}})
         n.sort(key=lambda x: x["startUTC"])
