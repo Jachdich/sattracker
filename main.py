@@ -12,9 +12,9 @@ SATS = {"noaa19": NOAA_19,
         "meteorm2-2": METEOR_M2_2,
         "meteorm2": METEOR_M2}
 
-LAT = "56.026706451127"
-LONG = "-5.7731581771188"
-API_KEY = "E3VFDJ-UWRTXU-WX5PNC-4740"
+LAT = "LATITUDE_IN_DEGREES_NORTH"
+LONG = "LONGITUDE_IN_DEGREES_EAST"
+API_KEY = "YOUR_API_KEY"
 
 import urllib.request
 import io, json, datetime, sys, time, traceback, threading, argparse
