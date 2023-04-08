@@ -8,6 +8,7 @@ Simple (And buggy currently, working on it!) command-line tool for predicting sa
  - Follow the instructions on https://www.n2yo.com/api/ to get your API key
  - Edit the `main.py` file with your latitude, longitude and API key (TODO: make it less annoying)
  - Run `./install.sh` (`chmod +x install.sh` may be needed)
+   - Alternatively, just run `main.py` in this directory
 
 ## Usage
 ```
